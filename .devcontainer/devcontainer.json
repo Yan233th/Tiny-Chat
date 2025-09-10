@@ -1,0 +1,21 @@
+{
+    "name": "Dev Environment",
+    "image": "node:24-bookworm-slim",
+    "features": {
+        "git": "latest"
+    },
+    "postCreateCommand": "npm install -g pnpm && pnpm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "ms-vscode.vscode-typescript-next"
+            ]
+        }
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "forwardPorts": [ 3000 ],
+    "remoteUser": "root"
+}
