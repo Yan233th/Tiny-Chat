@@ -1,6 +1,7 @@
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnpm-store/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -9,14 +10,14 @@
 !.yarn/versions
 
 # testing
-/coverage
+coverage/
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build/
 
 # misc
 .DS_Store
@@ -30,10 +31,10 @@ yarn-error.log*
 
 # local env files
 .env*
-.env
+!.env.example
 
 # vercel
-.vercel
+.vercel/
 
 # typescript
 *.tsbuildinfo
