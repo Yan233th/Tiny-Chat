@@ -1,11 +1,12 @@
 import { streamText, convertToModelMessages } from "ai";
 import { createDifyProvider } from "dify-ai-provider";
 
-const difyProvider = createDifyProvider({
-  baseURL: "http://172.24.250.22/v1",
-});
-
 const difyApiKey = process.env.DIFY_API_KEY;
+const difyBaseUrl = process.env.DIFY_BASE_URL;
+
+const difyProvider = createDifyProvider({
+  baseURL: difyBaseUrl,
+});
 
 if (!difyApiKey) {
   throw new Error("Missing DIFY_API_KEY in .env.local");
