@@ -8,10 +8,6 @@ const difyProvider = createDifyProvider({
   baseURL: difyBaseUrl,
 });
 
-if (!difyApiKey) {
-  throw new Error("Missing DIFY_API_KEY in .env.local");
-}
-
 const dify = difyProvider("dify-application-id", {
   responseMode: "streaming",
   apiKey: difyApiKey,
