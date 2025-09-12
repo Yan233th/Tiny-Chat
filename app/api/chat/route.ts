@@ -13,7 +13,7 @@ if (!difyApiKey) {
 }
 
 const dify = difyProvider("dify-application-id", {
-  responseMode: "blocking",
+  responseMode: "streaming",
   apiKey: difyApiKey,
 });
 
