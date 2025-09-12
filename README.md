@@ -83,13 +83,33 @@ pnpm dev
 
 ## 🐳 Docker 部署
 
-### 构建镜像
+### 使用已发布的镜像
+
+你可以直接从 Docker Hub 拉取并运行：
+
+```bash
+docker run -d \
+  -e DIFY_API_KEY=your_api_key \
+  -e DIFY_BASE_URL=http://<YOUR_SERVER_IP>/v1 \
+  --name tiny-chat \
+  yan233th/tiny-chat:latest
+```
+
+或者先拉取：
+
+```bash
+docker pull yan233th/tiny-chat:latest
+```
+
+---
+
+### 本地构建镜像并运行容器（可选）
+
+如果想基于源码自行构建：
 
 ```bash
 docker build -t tiny-chat:latest .
 ```
-
-### 运行容器
 
 ```bash
 docker run -d \
